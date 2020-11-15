@@ -62,15 +62,15 @@ footer {
         }
 
         a:nth-child(1) {
-          background-image: url("/assets/footer/facebook.png");
+          background-image: url("./assets/footer/facebook.png");
         }
 
         a:nth-child(2) {
-          background-image: url("/assets/footer/twitter.png");
+          background-image: url("./assets/footer/twitter.png");
         }
 
         a:nth-child(3) {
-          background-image: url("/assets/footer/instagram.png");
+          background-image: url("./assets/footer/instagram.png");
         }
       }
 
@@ -147,7 +147,7 @@ footer {
           &-phone {
             a {
               .contact-phone-image {
-                background-image: url("/assets/footer/phone.png");
+                background-image: url("./assets/footer/phone.png");
               }
             }
           }
@@ -155,7 +155,7 @@ footer {
           &-mail {
             a {
               .contact-mail-image {
-                background-image: url("/assets/footer/mail.png");
+                background-image: url("./assets/footer/mail.png");
               }
             }
           }
@@ -177,7 +177,7 @@ footer {
             font-size: 13px;
             color: white;
             outline: none;
-            background-image: url("/assets/footer/english.png");
+            background-image: url("./assets/footer/english.png");
             background-repeat: no-repeat;
             background-position: 15px 15px;
 
@@ -192,7 +192,7 @@ footer {
             position: absolute;
             top: 18px;
             right: 14px;
-            background-image: url("assets/footer/carret.png");
+            background-image: url("./assets/footer/carret.png");
           }
         }
       }

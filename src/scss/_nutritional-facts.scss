@@ -46,18 +46,18 @@
       }
 
       .left-bullets {
-        background-image: url("/assets/nutritional-facts/ellipse1.png");
+        background-image: url("./assets/nutritional-facts/ellipse1.png");
       }
 
       .bottle {
         width: 155px;
         height: 410px;
-        background-image: url("/assets/nutritional-facts/bottle.png");
+        background-image: url("./assets/nutritional-facts/bottle.png");
         padding: 0 30px;
       }
 
       .right-bullets {
-        background-image: url("/assets/nutritional-facts/ellipse2.png");
+        background-image: url("./assets/nutritional-facts/ellipse2.png");
       }
     }
 
@@ -81,15 +81,15 @@
         }
 
         &.bg-1:after {
-          content: url("/assets/nutritional-facts/energy.png");
+          content: url("./assets/nutritional-facts/energy.png");
         }
 
         &.bg-2:after {
-          content: url("/assets/nutritional-facts/nutrients.png");
+          content: url("./assets/nutritional-facts/nutrients.png");
         }
 
         &.bg-3:after {
-          content: url("/assets/nutritional-facts/taste.png");
+          content: url("./assets/nutritional-facts/taste.png");
         }
       }
 
@@ -99,15 +99,15 @@
         }
 
         &.bg-1:before {
-          content: url("/assets/nutritional-facts/vegan.png");
+          content: url("./assets/nutritional-facts/vegan.png");
         }
 
         &.bg-2:before {
-          content: url("/assets/nutritional-facts/science.png");
+          content: url("./assets/nutritional-facts/science.png");
         }
 
         &.bg-3:before {
-          content: url("/assets/nutritional-facts/anywhere.png");
+          content: url("./assets/nutritional-facts/anywhere.png");
         }
       }
 

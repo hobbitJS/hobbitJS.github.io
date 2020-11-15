@@ -53,11 +53,11 @@ header {
           }
 
           a.cart:before {
-            content: url("/assets/header/cart.png");
+            content: url("./assets/header/cart.png");
           }
 
           a.sign-in:before {
-            content: url("/assets/header/sign-in.png");
+            content: url("./assets/header/sign-in.png");
           }
         }
       }
@@ -66,7 +66,7 @@ header {
     .logo {
       width: 113px;
       height: 108px;
-      background-image: url("/assets/header/logo.png");
+      background-image: url("./assets/header/logo.png");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;

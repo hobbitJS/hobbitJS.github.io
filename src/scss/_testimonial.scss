@@ -22,19 +22,19 @@
       margin-bottom: 20px;
 
       &.bg-1 {
-        background-image: url("/assets/testimonial/anna.png");
+        background-image: url("./assets/testimonial/anna.png");
       }
 
       &.bg-2 {
-        background-image: url("/assets/testimonial/stiv.png");
+        background-image: url("./assets/testimonial/stiv.png");
       }
 
       &.bg-3 {
-        background-image: url("/assets/testimonial/julia.png");
+        background-image: url("./assets/testimonial/julia.png");
       }
 
       &.bg-4 {
-        background-image: url("/assets/testimonial/john.png");
+        background-image: url("./assets/testimonial/john.png");
       }
 
       &.video {
@@ -45,7 +45,7 @@
             width: 30px;
             height: 30px;
             align-self: flex-end;
-            background-image: url("/assets/testimonial/play-button.png");
+            background-image: url("./assets/testimonial/play-button.png");
           }
         }
       }
