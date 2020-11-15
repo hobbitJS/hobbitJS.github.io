@@ -1,1 +1,1 @@
-# script 'npm start'
+# script 'npm run watch'
