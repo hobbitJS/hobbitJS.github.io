@@ -1,0 +1,269 @@
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+footer {
+  .footer-container {
+    .join-us {
+      padding: 20px 0;
+
+      .input-group {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+
+        input {
+          font-family: $montserrat;
+          font-size: 20px;
+          line-height: 42px;
+          padding-left: 22px;
+          border: 2px solid #e5e4d7;
+          border-radius: 5px;
+
+          &::placeholder {
+            color: black;
+          }
+        }
+      }
+
+      input[type="text"] {
+        width: 90%;
+      }
+
+      input[type="button"] {
+        height: 56px;
+        border: none;
+        margin: 10px 0 0;
+        padding: 0 22px;
+        background-color: $btn-green;
+        color: white;
+        font-weight: 700;
+      }
+    }
+
+    .social-media {
+      padding: 50px 0;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      background-color: $footer-bg;
+      font-family: $montserrat;
+
+      &-links {
+        display: flex;
+
+        & > a {
+          display: block;
+          width: 50px;
+          height: 50px;
+          margin: 0 22px;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+
+        a:nth-child(1) {
+          background-image: url("/assets/footer/facebook.png");
+        }
+
+        a:nth-child(2) {
+          background-image: url("/assets/footer/twitter.png");
+        }
+
+        a:nth-child(3) {
+          background-image: url("/assets/footer/instagram.png");
+        }
+      }
+
+      .other-pages {
+        margin-top: 30px;
+
+        a {
+          padding: 6px 25px;
+          color: white;
+          text-decoration: none;
+        }
+
+        a:nth-child(2) {
+          border-left: 1px solid grey;
+          border-right: 1px solid grey;
+        }
+      }
+
+      p {
+        margin: 20px 0 0;
+        color: white;
+      }
+    }
+
+    .info {
+      background-color: $footer-bg-2;
+      padding: 20px 0;
+
+      &-container {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .contact {
+          display: flex;
+          flex-flow: column;
+
+          &-phone,
+          &-mail {
+            margin: 5px 0;
+
+            a {
+              display: flex;
+              color: white;
+              text-decoration: none;
+              font-family: $montserrat;
+
+              .contact-phone-image,
+              .contact-mail-image {
+                width: 40px;
+                height: 40px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                margin-right: 15px;
+              }
+
+              div {
+                display: flex;
+                flex-flow: column;
+                margin-right: 60px;
+
+                span:first-of-type {
+                  font-size: 18px;
+                }
+
+                span:last-of-type {
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+
+          &-phone {
+            a {
+              .contact-phone-image {
+                background-image: url("/assets/footer/phone.png");
+              }
+            }
+          }
+
+          &-mail {
+            a {
+              .contact-mail-image {
+                background-image: url("/assets/footer/mail.png");
+              }
+            }
+          }
+        }
+
+        .language-select {
+          position: relative;
+          margin-top: 20px;
+
+          select {
+            width: 195px;
+            padding: 13px 15px 13px 45px;
+            appearance: none;
+            position: relative;
+            background-color: $select-bg;
+            border: none;
+            border-radius: 5px;
+            font-family: $montserrat;
+            font-size: 13px;
+            color: white;
+            outline: none;
+            background-image: url("/assets/footer/english.png");
+            background-repeat: no-repeat;
+            background-position: 15px 15px;
+
+            option {
+              margin: 5px 0;
+            }
+          }
+
+          .carret {
+            width: 7px;
+            height: 4px;
+            position: absolute;
+            top: 18px;
+            right: 14px;
+            background-image: url("assets/footer/carret.png");
+          }
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  footer {
+    .footer-container {
+      .info {
+        &-container {
+          display: flex;
+          flex-flow: row;
+          padding: 0 15px;
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  footer {
+    .footer-container {
+      .join-us {
+        padding: 100px 0 90px;
+
+        .input-group {
+          flex-flow: row;
+
+          input {
+            font-size: 24px;
+            line-height: 52px;
+          }
+        }
+
+        input[type="text"] {
+          max-width: 500px;
+        }
+
+        input[type="button"] {
+          padding: 0 55px;
+          margin: 0 0 0 20px;
+        }
+      }
+
+      .info {
+        &-container {
+          max-width: 1170px;
+          margin: 0 auto;
+
+          .contact {
+            flex-flow: row;
+            margin: 0;
+          }
+
+          .language-select {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}

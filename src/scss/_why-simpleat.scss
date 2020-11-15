@@ -1,0 +1,170 @@
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+.why-simpleat {
+  margin-top: 30px;
+
+  .reasons {
+    margin-top: 35px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    .reason {
+      width: 165px;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      margin-top: 20px;
+
+      h4 {
+        margin: 40px 0 15px 0;
+        font-family: $bebas-neue;
+        font-size: 24px;
+        font-weight: 400;
+      }
+
+      p {
+        margin: 0;
+        font-family: $montserrat;
+        font-size: 13px;
+      }
+
+      div {
+        width: 100%;
+
+        .bg-img,
+        .front-img {
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+
+        .bg-img {
+          width: 100%;
+          height: 165px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .front-img {
+            height: 100px;
+            width: 100px;
+          }
+        }
+      }
+
+      &-div-1 {
+        .bg-img {
+          background-image: url("/assets/why-is-simpleat/div-1-1.png");
+        }
+
+        .front-img {
+          background-image: url("/assets/why-is-simpleat/div-1-2.png");
+        }
+      }
+
+      &-div-2 {
+        .bg-img {
+          background-image: url("/assets/why-is-simpleat/div-2-1.png");
+        }
+
+        .front-img {
+          background-image: url("/assets/why-is-simpleat/div-2-2.png");
+        }
+      }
+
+      &-div-3 {
+        .bg-img {
+          background-image: url("/assets/why-is-simpleat/div-3-1.png");
+        }
+
+        .front-img {
+          background-image: url("/assets/why-is-simpleat/div-3-2.png");
+        }
+      }
+
+      &-div-4 {
+        .bg-img {
+          background-image: url("/assets/why-is-simpleat/div-4-1.png");
+        }
+
+        .front-img {
+          background-image: url("/assets/why-is-simpleat/div-4-2.png");
+        }
+      }
+
+      &-div-5 {
+        .bg-img {
+          background-image: url("/assets/why-is-simpleat/div-5-1.png");
+        }
+
+        .front-img {
+          background-image: url("/assets/why-is-simpleat/div-5-2.png");
+        }
+      }
+
+      &-div-6 {
+        .bg-img {
+          background-image: url("/assets/why-is-simpleat/div-6-1.png");
+        }
+
+        .front-img {
+          background-image: url("/assets/why-is-simpleat/div-6-2.png");
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .why-simpleat {
+    .reasons {
+      flex-flow: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      padding: 0 15px;
+
+      .reason {
+        width: 50%;
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .why-simpleat {
+    max-width: 1170px;
+    padding: 115px 15px 100px;
+    margin: 0 auto;
+
+    .reasons {
+      .reason {
+        width: 30%;
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .why-simpleat {
+    .reasons {
+      justify-content: space-between;
+
+      padding: 0 10px;
+
+      .reason {
+        width: calc(100% / 6 - 20px);
+      }
+    }
+  }
+}

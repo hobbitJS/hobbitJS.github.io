@@ -1,0 +1,142 @@
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+header {
+  background-color: #f0f6f4;
+
+  nav {
+    padding: 15px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      width: 100%;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+          a,
+          button {
+            font-family: $montserrat;
+            font-size: 16px;
+          }
+
+          a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+          }
+
+          button {
+            padding: 16px 20px;
+            border: none;
+            border-radius: 7px;
+            background-color: $btn-green;
+            color: white;
+            font-weight: 700;
+          }
+        }
+
+        li:first-of-type {
+          a:before {
+            margin: 5px 2px 0 0;
+          }
+
+          a.cart:before {
+            content: url("/assets/header/cart.png");
+          }
+
+          a.sign-in:before {
+            content: url("/assets/header/sign-in.png");
+          }
+        }
+      }
+    }
+
+    .logo {
+      width: 113px;
+      height: 108px;
+      background-image: url("/assets/header/logo.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  header {
+    nav {
+      flex-flow: row;
+
+      div {
+        max-width: 250px;
+
+        &.cart-container {
+          ul {
+            justify-content: flex-start;
+
+            li {
+              margin-right: 20px;
+            }
+          }
+        }
+
+        &.sign-in-container {
+          ul {
+            li {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+  }
+
+  main {
+    margin-top: 140px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  header {
+    nav {
+      max-width: 1170px;
+      margin: 0 auto;
+
+      div {
+        ul {
+          li {
+            margin-left: 28px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,379 @@
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+.hero {
+  display: flex;
+  flex-flow: column;
+  padding: 30px 15px;
+
+  & > div {
+    min-height: 300px;
+  }
+
+  &-bottles {
+    background-image: url("/assets/hero/bottles.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &-info {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0 15px;
+    text-align: center;
+
+    & > div {
+      width: 100%;
+    }
+
+    &-description {
+      p {
+        font-family: $montserrat;
+        font-size: 16px;
+        line-height: 22px;
+        margin: 10px 0 0;
+      }
+
+      &-details {
+        font-weight: 400;
+      }
+
+      &-shipping-details {
+        font-weight: 600;
+      }
+    }
+
+    &-options {
+      & > div,
+      & > ul {
+        width: 100%;
+      }
+
+      margin-top: 25px;
+
+      .custom-select {
+        cursor: pointer;
+        text-align: start;
+        font-family: $montserrat;
+        position: relative;
+
+        .custom-selected-value {
+          min-height: 19px;
+          position: relative;
+          padding: 20px 0 20px 16px;
+          border: 2px solid $custom-grey;
+          border-radius: 5px;
+          font-size: 24px;
+
+          .arrows {
+            width: 16px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 11px;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+
+            .top-arrow,
+            .bottom-arrow {
+              height: calc(50% - 3px);
+              background-repeat: no-repeat;
+            }
+
+            .top-arrow {
+              background-image: url("/assets/hero/top-arrow.svg");
+              background-position: bottom;
+            }
+
+            .bottom-arrow {
+              background-image: url("/assets/hero/bottom-arrow.svg");
+              background-position: top;
+            }
+          }
+        }
+
+        .hidden-list {
+          display: none;
+        }
+
+        ul {
+          list-style: none;
+          padding: 5px 0;
+          text-indent: 16px;
+          background-color: white;
+          border: 2px solid $custom-grey;
+          border-radius: 5px;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          right: 0;
+          z-index: 999;
+
+          li {
+            padding: 5px 0;
+          }
+
+          li:hover {
+            background-color: $custom-grey;
+          }
+
+          li[data-selected="true"] {
+            background-color: $custom-grey;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    &-subscribing-options {
+      display: flex;
+      flex-flow: column;
+      margin-top: 20px;
+      font-family: $montserrat;
+      text-align: start;
+
+      & > div {
+        width: 100%;
+        display: flex;
+        margin: 5px 0;
+      }
+
+      div > .option-button {
+        width: 40px;
+        height: 40px;
+        border: 2px solid $custom-grey;
+        border-radius: 5px;
+        position: relative;
+        cursor: pointer;
+
+        &:after {
+          content: "";
+          width: 16px;
+          height: 16px;
+          background-color: $custom-grey;
+          border-radius: 5px;
+          position: absolute;
+          top: 12px;
+          left: 12px;
+        }
+
+        &.checked {
+          background-color: $check-blue;
+          width: 40px;
+          height: 40px;
+          border: 2px solid $check-blue;
+
+          &:after {
+            content: url("/assets/hero/tick.svg");
+            height: 20px;
+            width: 20px;
+            background-color: transparent;
+            top: 10px;
+            left: 10px;
+          }
+
+          & + .option-button-description span:first-child {
+            color: $check-blue;
+          }
+        }
+      }
+
+      div > .option-button-description {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: start;
+        margin-left: 20px;
+
+        span {
+          transition: all 0.1s ease;
+        }
+
+        span:first-child {
+          font-weight: bold;
+        }
+      }
+
+      .subscribe {
+        position: relative;
+
+        &-info {
+          max-width: 350px;
+          position: absolute;
+          z-index: 998;
+          bottom: -110px;
+          background-color: white;
+          border-radius: 5px;
+          padding: 5px 30px 5px 15px;
+          box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.1);
+          font-size: 12px;
+
+          p {
+            margin: 10px 0;
+
+            a {
+              color: $check-blue;
+            }
+          }
+        }
+
+        &-info.hidden {
+          display: none;
+        }
+
+        &-info:after {
+          content: "";
+          width: 0;
+          height: 0;
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent;
+          border-bottom: 7px solid white;
+          position: absolute;
+          top: -7px;
+          left: calc(50% - 7px);
+        }
+      }
+    }
+
+    &-price {
+      height: 70px;
+      font-family: $montserrat;
+      margin-top: 140px;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+
+      .price {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        span {
+          margin: 2px 0;
+        }
+
+        .price-total {
+          font-weight: bold;
+        }
+
+        .price-originally {
+          color: $darker-grey;
+        }
+      }
+
+      button {
+        width: 75%;
+        padding: 17px 0;
+        border: none;
+        border-radius: 5px;
+        background-color: $btn-green;
+        color: white;
+        font-family: $montserrat;
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .hero {
+    &-info {
+      &-subscribing-options {
+        flex-flow: row;
+      }
+
+      &-price {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .hero {
+    flex-flow: row;
+    justify-content: space-between;
+
+    & > div {
+      min-height: 505px;
+      width: calc(50% - 30px);
+    }
+
+    &-bottles {
+      background-position: left;
+    }
+
+    &-info {
+      margin: 0;
+
+      &-subscribing-options {
+        .subscribe {
+          &-info {
+            bottom: auto;
+            top: -130px;
+          }
+
+          &-info:after {
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 7px solid white;
+            border-bottom: none;
+            top: auto;
+            bottom: -7px;
+          }
+        }
+      }
+
+      &-price {
+        flex-flow: row;
+
+        div,
+        button {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .hero {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 96px 0 105px 0;
+    justify-content: space-between;
+
+    &-info {
+      &-description {
+        p {
+          span {
+            display: block;
+          }
+        }
+      }
+
+      &-subscribing-options {
+        .subscribe {
+          &-info {
+            top: -110px;
+          }
+        }
+      }
+    }
+  }
+}

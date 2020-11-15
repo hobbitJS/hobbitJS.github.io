@@ -1,0 +1,91 @@
+@import "variables.scss";
+@import "header.scss";
+@import "hero-article.scss";
+@import "what-is-simpleat.scss";
+@import "video-container.scss";
+@import "why-simpleat.scss";
+@import "testimonial.scss";
+@import "main-ingredients.scss";
+@import "nutritional-facts.scss";
+@import "glycemic-index.scss";
+@import "super-food.scss";
+@import "footer.scss";
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  .title {
+    text-align: center;
+
+    &.medium {
+      max-width: 750px;
+    }
+
+    h1 {
+      font-family: $bebas-neue;
+      font-weight: 400;
+      height: 50px;
+      line-height: 50px;
+      font-size: 50px;
+      margin: 0;
+    }
+
+    & > span {
+      width: 35px;
+      height: 10px;
+      display: inline-block;
+      margin-top: 8px;
+      background-image: url("/assets/shape-black.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      &.white {
+        background-image: url("/assets/shape-white.png");
+      }
+    }
+
+    p {
+      margin: 0;
+      font-family: $montserrat;
+      line-height: 24px;
+
+      &.bold {
+        font-weight: 700;
+      }
+    }
+
+    p:first-of-type {
+      margin: 20px 0 13px 0;
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  body {
+    .title {
+      h1 {
+        height: 60px;
+        line-height: 60px;
+        font-size: 60px;
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}

@@ -1,0 +1,213 @@
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+.super-food {
+  background-color: $article-bg-color;
+  padding: 30px 15px;
+
+  &-container {
+    .title {
+      h1 {
+        margin-bottom: 45px;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin: 50px 0 44px;
+
+      .button {
+        cursor: pointer;
+        margin: 0 20px;
+        width: 260px;
+
+        &.selected {
+          color: $check-blue;
+          position: relative;
+
+          &:after {
+            content: "";
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid white;
+            position: absolute;
+            bottom: -44px;
+            left: calc(50% - 15px);
+          }
+
+          span:after {
+            border-color: $check-blue;
+          }
+        }
+
+        span {
+          position: relative;
+          padding: 5px 0;
+          font-family: $bebas-neue;
+          font-size: 18px;
+          font-weight: 400;
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 22%;
+            width: 56%;
+            border: 2px solid black;
+          }
+        }
+      }
+    }
+
+    .content {
+      text-align: center;
+
+      & > div {
+        width: 100%;
+        min-height: 500px;
+        display: none;
+        background-color: white;
+        padding: 20px 15px;
+        box-sizing: border-box;
+        border-radius: 10px;
+
+        .image {
+          width: 100%;
+          text-align: center;
+          font-family: $montserrat;
+          font-size: 30px;
+        }
+
+        .info {
+          width: 100%;
+          text-align: left;
+
+          table {
+            font-family: $montserrat;
+            border-collapse: collapse;
+            width: 100%;
+
+            tr {
+              border-bottom: 1px solid lightgrey;
+
+              th,
+              td {
+                height: 35px;
+              }
+
+              th {
+                font-weight: 700;
+                text-align: left;
+              }
+
+              td {
+                &:first-of-type {
+                  color: $check-blue;
+                  font-weight: 700;
+                  width: 52%;
+                }
+              }
+            }
+          }
+        }
+
+        &.visible {
+          display: flex;
+          flex-flow: column;
+        }
+      }
+
+      button {
+        font-size: 18px;
+        color: white;
+        background-color: $btn-green;
+        font-weight: 700;
+        margin-top: 40px;
+        border: none;
+        border-radius: 5px;
+        padding: 24px 48px;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .super-food {
+    &-container {
+      .title {
+        h1 {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .super-food {
+    &-container {
+      .buttons {
+        .button {
+          span {
+            font-size: 24px;
+          }
+        }
+      }
+
+      .content {
+        & > div {
+          &.visible {
+            flex-flow: row;
+          }
+        }
+
+        .image {
+          width: 30%;
+          margin-right: 12%;
+          background-image: url("/assets/super-food/super-food.png");
+          background-repeat: no-repeat;
+          background-position: 50% center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .info {
+          width: 58%;
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .super-food {
+    &-container {
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 100px 15px;
+
+      .content {
+        text-align: center;
+
+        & > div {
+          padding: 40px 45px;
+        }
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}

@@ -1,0 +1,208 @@
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+.nutritional-facts {
+  background-color: $article-bg-color;
+  padding: 30px 10px;
+
+  &-container {
+    margin-top: 35px;
+
+    .facts-first-container,
+    .facts-second-container {
+      width: 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .facts-first-container {
+      align-items: flex-end;
+    }
+
+    .facts-second-container {
+      align-items: flex-start;
+    }
+
+    .facts-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 30px;
+
+      .left-bullets,
+      .right-bullets {
+        width: 80px;
+        height: 280px;
+      }
+
+      .left-bullets,
+      .right-bullets,
+      .bottle {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+
+      .left-bullets {
+        background-image: url("/assets/nutritional-facts/ellipse1.png");
+      }
+
+      .bottle {
+        width: 155px;
+        height: 410px;
+        background-image: url("/assets/nutritional-facts/bottle.png");
+        padding: 0 30px;
+      }
+
+      .right-bullets {
+        background-image: url("/assets/nutritional-facts/ellipse2.png");
+      }
+    }
+
+    .fact {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      font-family: $montserrat;
+
+      &:last-child {
+        margin: 0;
+      }
+
+      &.right-img {
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+
+        &:after {
+          margin-left: 30px;
+        }
+
+        &.bg-1:after {
+          content: url("/assets/nutritional-facts/energy.png");
+        }
+
+        &.bg-2:after {
+          content: url("/assets/nutritional-facts/nutrients.png");
+        }
+
+        &.bg-3:after {
+          content: url("/assets/nutritional-facts/taste.png");
+        }
+      }
+
+      &.left-img {
+        &:before {
+          margin-right: 30px;
+        }
+
+        &.bg-1:before {
+          content: url("/assets/nutritional-facts/vegan.png");
+        }
+
+        &.bg-2:before {
+          content: url("/assets/nutritional-facts/science.png");
+        }
+
+        &.bg-3:before {
+          content: url("/assets/nutritional-facts/anywhere.png");
+        }
+      }
+
+      &-content {
+        h3 {
+          font-weight: 700;
+          font-size: 18px;
+          margin: 0 0 5px;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &-buttons {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    a {
+      font-size: 18px;
+      color: $btn-green;
+      margin: 40px 0;
+      font-family: $montserrat;
+    }
+
+    button {
+      font-size: 18px;
+      color: white;
+      background-color: $btn-green;
+      font-weight: 700;
+      border: none;
+      border-radius: 5px;
+      padding: 24px 48px;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .nutritional-facts {
+    &-buttons {
+      display: flex;
+    }
+
+    &-container {
+      margin: 30px auto 0;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .nutritional-facts {
+    padding: 100px 15px;
+
+    &-container {
+      max-width: 1170px;
+
+      display: flex;
+    }
+
+    &-container {
+      .fact {
+        &.right-img {
+          &:nth-child(2) {
+            margin-right: 30px;
+          }
+        }
+
+        &.left-img {
+          &:nth-child(2) {
+            margin-left: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
