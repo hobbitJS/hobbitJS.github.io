@@ -12,7 +12,7 @@
     "watch:css": "onchange \"src/scss\" -- npm run build:css",
     "serve": "browser-sync start --server \"dist\" --files \"dist\"",
     "watch": "run-p serve watch:css",
-    "start": "run-p watch"
+    "start": "npm run watch"
   },
   "author": "",
   "license": "ISC",
